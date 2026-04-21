@@ -40,11 +40,18 @@ export async function POST(req: NextRequest) {
       
       Output ONLY a valid JSON array of exactly 4 objects matching this format exactly:
       [
-        { "slideNumber": 1, "copy": "<your strictly curated text here>" },
-        { "slideNumber": 2, "copy": "<your strictly curated text here>" },
-        { "slideNumber": 3, "copy": "<your strictly curated text here>" },
-        { "slideNumber": 4, "copy": "<your strictly curated text here>" }
+        { 
+          "slideNumber": 1, 
+          "copy": "<your strictly curated hook text here>",
+          "imagePrompt": "<a descriptive visual prompt for an AI image generator representing the hook, e.g., 'A striking minimalist clock dripping like liquid, neon orange accents, dark background'>"
+        },
+        ...
       ]
+      
+      Requirements for imagePrompt:
+      - Be descriptive and visual.
+      - Focus on metaphors or abstract concepts related to the copy.
+      - Maintain a consistent aesthetic (minimalist, high-end, modern).
       
       DO NOT wrap the response in markdown code blocks like \`\`\`json. DO NOT add any conversational text. Return plain JSON only.
     `;

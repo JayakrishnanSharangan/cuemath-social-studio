@@ -1,17 +1,39 @@
-# 🚀 The Social Media Studio
+# 🚀 Social Media Studio
 
-A purpose-built internal tool for Cuemath marketers to instantly transform rough ideas into high-converting, 4-slide Instagram carousels.
+**Status: ✅ MVP REACHED**
 
-## 🛠 What I Built
-This is a Minimum Viable Product (MVP) of "The Social Media Studio." It utilizes a React/Next.js frontend and a serverless backend to communicate with the Google Gemini API. 
+A high-performance AI studio that transforms abstract ideas into ready-to-post Instagram carousels with visual concepts and high-fidelity exports.
 
-## ⚖️ Smart Trade-offs
-The biggest decision in this build was **intentionally skipping AI image generation**. 
-Why? Because for Cuemath's brand, narrative control is the highest priority. Generating unpredictable images often distracts from the core message. I traded the "flashiness" of AI image generation for a rock-solid, highly editable text-to-storytelling pipeline in an ergonomic vertical feed.
+## ✨ MVP Features
+- **AI-Driven Visual Concepts**: Beyond just text, the studio generates visual prompts and conceptual sample images for every slide using the Pollinations.ai API.
+- **High-Resolution Export**: Convert your story directly into social-ready `.png` files with one click.
+- **Dynamic Storyboarding**: A structured 4-phase journey (Hook, Build, Climax, CTA) optimized for social media engagement.
+- **Premium Dark-Mode UI**: A focused, ergonomic environment designed for high-end content creation.
+- **Real-time Editing**: Refine AI-generated copy on the fly before exporting.
 
-## 🧠 Process Thinking & Challenges
-During testing, I initially wired the backend to use the `gemini-1.5-flash` model but hit a `503 Service Unavailable` API rate limit. This forced me to build a graceful failure state (a custom UI banner explaining the server traffic) and taught me how to hot-swap to different models to maintain uptime. 
+## 🧰 Tech Stack
+- **Framework**: Next.js 15+, React 19
+- **AI Engine**: Google Gemini (Direct API integration)
+- **Image Intelligence**: Pollinations.ai
+- **Export Engine**: `html-to-image`
+- **Styling**: Tailwind CSS 4.0
 
-## 🚀 Future Improvements (With More Time)
-1. **Database Integration:** Allow marketers to save their generated carousels.
-2. **Direct Image Export:** Implement `html2canvas` so the editable HTML slides can be directly downloaded as `.png` files.
+## 🚀 Setup & Installation
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure environment variables in `.env.local`:
+   ```env
+   GEMINI_API_KEY=your_key_here
+   ```
+4. Launch the studio:
+   ```bash
+   npm run dev
+   ```
+
+## 🛤 Future Roadmap
+- **Custom Brand Kits**: Save and apply your own fonts and color palettes.
+- **Video Backgrounds**: Integrate motion-based concepts for more dynamic carousels.
+- **Direct Instagram API Posting**: Schedule posts directly from the studio.
